@@ -63,8 +63,6 @@ model = dc.models.KerasModel(MyGraphConvModel(), loss=dc.models.losses.SoftmaxCr
 model.restore()
 
 dataset_file = "mushroom_dataset.csv"
-#dataset_file = "dataset_900_for_PCA.csv"
-#dataset_file = "negative_dataset_900.csv"
 featurizer = dc.feat.ConvMolFeaturizer()
 training_task=['class']
 loader = dc.data.CSVLoader(tasks=training_task, smiles_field="smiles", featurizer=featurizer)
